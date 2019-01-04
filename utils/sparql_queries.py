@@ -42,8 +42,8 @@ def exec_ner_query(dataset):
 
 def load_dataset(filepath):
     dataset = autoclass('org.apache.jena.tdb.TDBFactory').createDataset(STORE_PATH)
-    # model = dataset.getDefaultModel()
-    # autoclass('org.apache.jena.tdb.TDBLoader').loadModel(model, filepath)
+    model = dataset.getDefaultModel()
+    autoclass('org.apache.jena.tdb.TDBLoader').loadModel(model, filepath)
     return dataset
 
 

@@ -55,19 +55,10 @@ def dbpedia_ner_dataset():
     results_to_csv(results, "ner_dbpedia.csv")
 
 
-def yago_ner_dataset():
-    dataset = load_dataset(RDFfiles.YAGO_LABELS_EN)
-    dataset = load_dataset(RDFfiles.YAGO_TRANSITIVE_TYPES_EN)
-    results = exec_ner_query(dataset)
-    results_to_csv(results, "ner_yago.csv")
-
-
 def main():
     argparse.ArgumentParser(prog='ner-dataset', description='Transform rdf dataset into a dataset for NER')
     clean_dataset()
     dbpedia_ner_dataset()
-    clean_dataset()
-    yago_ner_dataset()
     clean_dataset()
 
 

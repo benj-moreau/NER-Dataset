@@ -25,19 +25,6 @@ Install dependencies with pip:
 pip install -r requirements.txt
 ```
 
-# Yago dataset
-
-Files from YAGO needs to get some kind of preprocessed, where non-unicode characters are replaced in order for Jena to accept the data.
-Put yago files in a folder. go in this directory and run:
-
-Mac:
-
-`sed -i '' -e 's/|/-/g' ./* && sed -i '' -e 's/\\\\/-/g' ./* && sed -i '' -e  's/–/-/g' ./*`
-
-Windows or Linux:
-
-`sed -i 's/|/-/g' ./* && sed -i 's/\\\\/-/g' ./* && sed -i 's/–/-/g' ./*`
-
 # Run it !
 
 ```bash
